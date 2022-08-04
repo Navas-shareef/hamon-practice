@@ -1,4 +1,5 @@
 from palindrome import palindrome
+from panagram import panagram
 from primality import prime
 
 
@@ -17,3 +18,8 @@ def test_with_non_prime_number():
 
 def test_with_prime_number():
     assert prime(3) == True
+
+
+def test_panagram():
+    assert panagram('abcdefghijklmnopqrstuvwxyz') == True
+    assert panagram('my name is ') == False
