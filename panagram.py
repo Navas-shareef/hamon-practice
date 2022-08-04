@@ -1,18 +1,14 @@
+import string
+
+
 def panagram(sentence):
-    key='abcdefghijklmnopqrstuvwxyz'
-    sentence=sentence.lower()
-    for i in key:
-        if i in sentence:
-            pass
-        else:
+
+    sentence = sentence.lower()
+    for letter in string.ascii_lowercase:
+        if letter not in sentence:
+
             return False
-    return True        
+    return True
 
 
-sentence=input("enter a centence to check whether it is panagram or not\n")
-result=panagram(sentence)
-if result:
-    print('it is a panagram')
-else:
-    print('it is not panagram')    
-
+# if __name__ == '__main__':
