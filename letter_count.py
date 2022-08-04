@@ -5,4 +5,4 @@ def letter_count(sentence):
     for letter in sentence:
         if letter not in dic:
             dic[letter] = list(sentence).count(letter)
-    print(dic)
+    return dic
