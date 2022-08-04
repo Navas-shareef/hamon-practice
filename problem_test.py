@@ -1,3 +1,6 @@
+from distutils.command.build_scripts import first_line_re
+
+from letter_count import letter_count
 from palindrome import palindrome
 from panagram import panagram
 from primality import prime
@@ -23,3 +26,10 @@ def test_with_prime_number():
 def test_panagram():
     assert panagram('abcdefghijklmnopqrstuvwxyz') == True
     assert panagram('my name is ') == False
+
+
+def test_letter_count():
+    assert letter_count("navas shareef") == {
+        'n': 1, 'a': 3, 'v': 1, 's': 2, 'h': 1, 'r': 1, 'e': 2, 'f': 1}
+    assert letter_count("navas") != {
+        'n': 1, 'a': 3, 'v': 1, 's': 2, 'h': 1, 'r': 1, 'e': 2, 'f': 1}
